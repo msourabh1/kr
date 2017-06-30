@@ -3,6 +3,7 @@ package com.fdp.kr.datamodel;
 import java.util.List;
 
 public class Question {
+	private String questionId;
 	private String questionText;
 	private Tag tag;
 	private List<Answer> answers;
@@ -25,5 +26,12 @@ public class Question {
 	public void setAnswers(List<Answer> answers) {
 		this.answers = answers;
 	}
+	public String getQuestionId() {
+		return questionId;
+	}
+	public void setQuestionId(String questionId) {
+		this.questionId = questionId;
+	}
+	
 	
 }
