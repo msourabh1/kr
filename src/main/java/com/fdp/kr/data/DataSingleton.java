@@ -7,11 +7,13 @@ import com.fdp.kr.datamodel.Question;
 
 public class DataSingleton {
 	private Map<String, Question> questionsMap;
+	private int questionSequence;
 	
 	public static DataSingleton dataSingleton;
 	
 	public DataSingleton(){
 		questionsMap = new HashMap<String, Question>();
+		questionSequence = 0;
 	}
 	
 	public static DataSingleton getDataObject(){
@@ -29,6 +31,15 @@ public class DataSingleton {
 		this.questionsMap = questionsMap;
 	}
 
+	public int getQuestionSequence() {
+		return questionSequence;
+	}
+
+	public void setQuestionSequence(int questionSequence) {
+		this.questionSequence = questionSequence;
+	}
+
+	
 	
 	
 

@@ -11,18 +11,17 @@ import com.fdp.kr.datamodel.User;
 public class QuestionAnswerImpl implements QuestionAnswer{
 
 	public boolean postquestion(User user, String questionString, Tag tag) {
+		DataSingleton dataSingleton = DataSingleton.getDataObject();
 		Question question = new Question();
 		question.setQuestionText(questionString);
 		question.setTag(tag);
-		question.setQuestionId(questionId);
-		DataSingleton.getDataObject().getQuestionsMap().put(user.getUserId(), question);
+		question.setQuestionId("q:"+String.valueOf(dataSingleton.getQuestionSequence()));
+		dataSingleton.setQuestionSequence(dataSingleton.getQuestionSequence() + 1);
+		dataSingleton.getQuestionsMap().put(user.getUserId(), question);
 		return true;
 	}
 
 	public boolean postanswer(Question question, String answerText) {
-		Answer answer = new Answer();
-		answer.setAnswer(answerText);
-		ans
 		return false;
 	}
 
