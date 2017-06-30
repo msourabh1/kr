@@ -17,7 +17,7 @@ public class QuestionAnswerImpl implements QuestionAnswer{
 		question.setTag(tag);
 		question.setQuestionId("q:"+String.valueOf(dataSingleton.getQuestionSequence()));
 		dataSingleton.setQuestionSequence(dataSingleton.getQuestionSequence() + 1);
-		dataSingleton.getQuestionsMap().put(user.getUserId(), question);
+		dataSingleton.getQuestionsMap().put(question.getQuestionId(), question);
 		return true;
 	}
 
