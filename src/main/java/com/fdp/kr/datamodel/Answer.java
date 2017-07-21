@@ -6,6 +6,7 @@ public class Answer {
 	private String answer;
 	private List<Vote> votes;
 	private String answerId;
+	private String userId;
 	public String getAnswer() {
 		return answer;
 	}
@@ -24,6 +25,13 @@ public class Answer {
 	public void setAnswerId(String answerId) {
 		this.answerId = answerId;
 	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+	
 	
 	
 	

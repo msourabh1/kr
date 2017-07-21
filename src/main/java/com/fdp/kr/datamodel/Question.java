@@ -6,7 +6,7 @@ public class Question {
 	private String questionId;
 	private String questionText;
 	private Tag tag;
-	private List<Answer> answers;
+	private List<String> answers;
 	
 	public String getQuestionText() {
 		return questionText;
@@ -20,10 +20,10 @@ public class Question {
 	public void setTag(Tag tag) {
 		this.tag = tag;
 	}
-	public List<Answer> getAnswers() {
+	public List<String> getAnswers() {
 		return answers;
 	}
-	public void setAnswers(List<Answer> answers) {
+	public void setAnswers(List<String> answers) {
 		this.answers = answers;
 	}
 	public String getQuestionId() {

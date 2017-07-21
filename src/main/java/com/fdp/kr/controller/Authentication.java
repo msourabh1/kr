@@ -1,5 +1,7 @@
 package com.fdp.kr.controller;
 
-public class Authentication {
+import com.fdp.kr.request.RegisterUserRequest;
 
+public interface Authentication {
+	public String registerUser(RegisterUserRequest registerUserRequest);
 }
